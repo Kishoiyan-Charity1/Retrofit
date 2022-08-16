@@ -19,28 +19,36 @@ class MainActivity : AppCompatActivity() {
         getPosts()
 
     }
-    fun getPosts(){
-        val retrofit=ApiClient.buildAppClient(ApiInterface::class.java)
-        val request = retrofit.getPosts()
-        request.enqueue(object : Callback<List<Post>>{
+
+    fun getPosts() {
+        val ApiClient = ApiClient.buildApiClient(ApiInterface::class.java)
+        val request = ApiClient.getPosts()
+        request.enqueue(object : Callback<List<Post>> {
             override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
                 val post = response.body()!!
 
-               if (response.isSuccessful){
-                   var adapter=RetrofitAdapter(baseContext, post)
-                   binding.rvRetrofit.adapter=adapter
-                   binding.rvRetrofit.layoutManager=LinearLayoutManager(baseContext)
+                if (response.isSuccessful) {
+                    var adapter = RetrofitAdapter(baseContext, post)
+                    binding.rvRetrofit.adapter = adapter
+                    binding.rvRetrofit.layoutManager = LinearLayoutManager(baseContext)
 //                   val posts = response.body()
-                   Toast.makeText(baseContext, "fetched ${post.size}posts",
-                       Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        baseContext, "fetched ${post.size}posts",
+                        Toast.LENGTH_LONG
+                    ).show()
 
-               }
+                }
             }
-
             override fun onFailure(call: Call<List<Post>>, t: Throwable) {
+//                Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
 
             }
 
         })
     }
+//    fun displayPosts(postList:List<Post>){
+//        binding.rvRetrofit.LayoutManager =LinearLayoutManager(this)
+//        val postsAdapter= PostsRvAdapter(postList)
+//        binding.rvRetrofit.adapter=postsAdapter
+//    }
 }

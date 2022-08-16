@@ -4,8 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/retrofit_item_list.xml" value="0.164" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1758974358974359" />
-        <entry key="app/src/main/res/layout/retrofit_posts_lists.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/retrofit_posts_lists.xml" value="0.17888563049853373" />
       </map>
     </option>
   </component>
