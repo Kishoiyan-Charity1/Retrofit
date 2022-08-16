@@ -1,6 +1,7 @@
 package com.example.myposts
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -23,6 +24,12 @@ class RetrofitAdapter(var context: Context, var postList: List<Post>)
             userId.text = currentItem.userId.toString()
             tvTittle.text = currentItem.title
             tvBody.text = currentItem.body
+            val context=holder.itemView.context
+            holder.bindingView.cvCons.setOnClickListener(){
+                val intent = Intent(context, CommentActivity::class.java)
+                intent.putExtra("POST_ID", currentItem.id)
+                context.startActivity(intent)
+            }
         }
 
     }
