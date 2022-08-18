@@ -8,6 +8,8 @@
         <entry key="app/src/main/res/layout/activity_comment2.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_comment3.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/comment_list_item.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/comments.xml" value="0.25" />
         <entry key="app/src/main/res/layout/retrofit_posts_lists.xml" value="0.17888563049853373" />
       </map>
     </option>
@@ -17,5 +19,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.19270833333333334" />
+      </ProjectState>
+    </option>
   </component>
 </project>

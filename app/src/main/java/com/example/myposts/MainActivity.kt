@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+
+
     fun getPosts() {
         val ApiClient = ApiClient.buildApiClient(ApiInterface::class.java)
         val request = ApiClient.getPosts()
@@ -36,19 +39,18 @@ class MainActivity : AppCompatActivity() {
                         baseContext, "fetched ${post.size}posts",
                         Toast.LENGTH_LONG
                     ).show()
-
                 }
             }
             override fun onFailure(call: Call<List<Post>>, t: Throwable) {
 //                Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
-
             }
 
         })
     }
-//    fun displayPosts(postList:List<Post>){
-//        binding.rvRetrofit.LayoutManager =LinearLayoutManager(this)
-//        val postsAdapter= PostsRvAdapter(postList)
-//        binding.rvRetrofit.adapter=postsAdapter
-//    }
+
+
+
+
 }
+
+
